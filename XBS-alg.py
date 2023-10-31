@@ -14,3 +14,6 @@ def ER(N,p):
     return Matrix
 
 
+#step1. select two links and order the four nodes according to the degree of nodes
+
+#step2. rewire the two links to form assorative or disassorative network
