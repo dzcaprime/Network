@@ -54,7 +54,7 @@ class Game:
 
     def update_strategy(self, i):
         if self.payoffs[i] < self.payoffs[i]:
-            self.strategies[i] = random.randint(0, self.m-1)
+            self.strategies[i] = random.randint(0, 2)
 
     def update(self):
         self.update_strategies_random()
@@ -77,12 +77,16 @@ class Game:
     
     def get_collect(self):
         return self.collect
+    
+    def get_network(self):
+        return self.G
 
 # Path: Dynamics/main.py
-
+'''
 test_graph=nx.Graph()
 test_graph.add_nodes_from([0,1,2,3])
 test_graph.add_edges_from([(0,1),(1,2),(2,0),(3,1)])
 game=Game(4,test_graph,5,3,1,0)
 game.run(10)
 print(game.get_collect())
+'''
